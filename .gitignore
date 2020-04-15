@@ -1,9 +1,9 @@
 .fake/
+.ionide/
 .vs/
-obj/
 bin/
+obj/
 packages/
 paket-files/
 *.DotSettings.user
 deploy
-/.ionide/

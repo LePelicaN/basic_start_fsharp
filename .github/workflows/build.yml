@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: restore tool
+      run: dotnet tool restore
+
+    - name: build app
+      run: dotnet fake build
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: my-app
+        path: src/bin/Debug/netcoreapp3.1/MyApp.dll

@@ -1,0 +1,9 @@
+.fake/
+.vs/
+obj/
+bin/
+packages/
+paket-files/
+*.DotSettings.user
+deploy
+/.ionide/
